@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="leftSide">
+          <div class="topImg">
+            <img src="./images/card-logo.svg" alt="" />
+            <span class="numberCard">0000 0000 0000 0000</span>
+            <div class="nameAndDate">
+              <span>Felica Leire</span>
+              <span>09/00</span>
+            </div>
+          </div>
+          <div class="bottomImg">
+            <span>000</span>
+          </div>
+        </div>
+
+        <div class="rightSide ">
+          <form class="">
+            <div class="nameAndNumber">
+              <h6>Cardholder Name</h6>
+              <input type="text" date-input placeholder="e.g Jane Appleseed" required />
+              <h6>Card Number</h6>
+              <input type="text" date-input placeholder="e.g. 1234 5678 9123 0000" pattern="\b(?:\d[ -]*?){13,16}\b" maxlength="16" size="16" required />
+              <span class=""></span>
+            </div>
+
+            <div class="dateAndCvc">
+              <div class="header">
+                <h6>exp.Date(MM/YY)</h6>
+                <h6>cvc</h6>
+              </div>
+              <div class="inputsDate">
+                <input type="text" date-input maxlength="2" size="2" placeholder="MM" class="date" required/>
+                <input type="text" date-input maxlength="2" size="2" placeholder="YY" class="date" required/>
+                <input type="text" date-input pattern="\d*" maxlength="3" size="3" placeholder="e.g. 123" class="cvc" required/>
+              </div>
+              <div class="error">
+                <span class="active"></span>
+                <span class="active"></span>
+              </div>
+            </div>
+            <button type="submit" class="confBtn">Confirm</button>
+          </form>
+
+          <div class="completeState active">
+            <img src="./images/icon-complete.svg" alt="" />
+            <div>
+              <h2>Thank You!</h2>
+              <p>We've added your card details</p>
+            </div>
+            <button>Continue</button>
+          </div>
+
+        </div>
+      </div>
+    </main>
+   
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
